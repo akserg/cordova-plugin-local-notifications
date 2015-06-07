@@ -124,8 +124,6 @@
                 android:exported="false" />
 
         </config-file>
-        
-        <lib-file src="libs/android/android-support-v4.jar" />
 
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
