@@ -559,6 +559,7 @@ public class LocalNotification extends CordovaPlugin {
         }
 
         webView.sendJavascript(js);
+    }
 
     /**
      * Convert JSON array of integers to List.
