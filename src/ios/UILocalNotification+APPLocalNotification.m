@@ -168,9 +168,16 @@ NSInteger const APPLocalNotificationTypeTriggered = 2;
 
     [obj removeObjectForKey:@"updatedAt"];
 
-    data = [NSJSONSerialization dataWithJSONObject:obj
+    if (obj != nil && obj.count > 0)
+    {
+        data = [NSJSONSerialization dataWithJSONObject:obj
                                            options:NSJSONWritingPrettyPrinted
                                              error:Nil];
+    }
+    else
+    {
+        data = nil;
+    }
 
     json = [[NSString alloc] initWithData:data
                                  encoding:NSUTF8StringEncoding];
