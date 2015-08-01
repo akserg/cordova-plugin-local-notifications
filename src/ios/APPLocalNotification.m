@@ -571,7 +571,7 @@
 {
     UILocalNotification* notification = [localNotification object];
 
-    if ([notification wasUpdated])
+    if ([notification wasUpdated] || [notification userInfo] == nil)
         return;
 
     NSTimeInterval timeInterval = [notification timeIntervalSinceLastTrigger];
